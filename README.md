@@ -113,14 +113,6 @@ V7 Smart Daily Planner is a modern, production-ready productivity dashboard buil
 
 3. **Open in browser**
    - Simply open `index.html` in your browser
-   - Or use a local server:
-     ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js
-     npx serve
-     ```
 
 4. **Start planning your day!** 🎉
 
