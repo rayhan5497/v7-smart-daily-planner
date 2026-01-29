@@ -1,152 +1,192 @@
-# GitHub Issues for V7 Smart Daily Planner
+# Pre-Built GitHub Issues
 
-Create these issues in your GitHub repository with the specified labels.
-
----
-
-## Issue 1: Fix spacing in task card on mobile
-
-**Labels:** `good first issue`, `help wanted`, `bug`
-
-### Description
-On mobile devices (screen width < 480px), the task card has inconsistent spacing between the checkbox and the task title. The gap appears too large on some devices.
-
-### Expected Behavior
-The spacing should be consistent and comfortable for touch interaction (around 0.5rem gap).
-
-### Steps to Reproduce
-1. Open the dashboard on a mobile device or use browser dev tools (375px width)
-2. Add a task
-3. Observe the spacing between the checkbox and title
-
-### Files to Check
-- `css/main.css` - Look for `.task-card` responsive styles
-
-### Suggested Fix
-Adjust the gap in the mobile media query for `.task-card`.
+Copy and paste these issues into your GitHub repository.
 
 ---
 
-## Issue 2: Improve dark mode contrast
+## 📋 Issue 1: Add Screenshots to README
+
+**Title:** Add project screenshots for dashboard sections
+
+**Labels:** `good first issue`, `help wanted`, `documentation`
+
+**Description:**
+```
+## 📸 Task
+Add screenshots to the README to showcase the dashboard.
+
+## 🎯 What's Needed
+- Dashboard in light mode (desktop)
+- Dashboard in dark mode (desktop)  
+- Mobile view
+- Individual module screenshots (optional)
+
+## 📁 Where to Add
+1. Save screenshots to `assets/screenshots/`
+2. Update `README.md` with correct image paths
+
+## 💡 Tips
+- Use browser dev tools for consistent sizing
+- Desktop: 1920x1080
+- Mobile: 375x667
+
+This is a great first contribution! 🎉
+```
+
+---
+
+## 📋 Issue 2: Improve Dark Mode Contrast
+
+**Title:** Improve dark mode contrast for better readability
 
 **Labels:** `good first issue`, `help wanted`, `enhancement`
 
-### Description
-Some text elements in dark mode have low contrast, making them harder to read. We should improve the contrast ratio to meet WCAG AA standards (4.5:1 for normal text).
+**Description:**
+```
+## 🌙 Problem
+Some text elements in dark mode have low contrast, making them hard to read.
 
-### Areas to Improve
-- Note preview text in notes module
-- Task date/meta information
+## 🎯 Areas to Fix
+- Note preview text (too dim)
+- Task meta information (dates, priority labels)
 - Sidebar subtitle text
 
-### Files to Check
-- `css/themes.css` - Dark theme variables
-- Look for `--text-tertiary` and `--text-secondary` in dark mode
+## 📁 Files to Edit
+- `css/themes.css` - Look for `[data-theme="dark"]`
+- Focus on `--text-tertiary` and `--text-secondary` variables
 
-### Resources
+## ✅ Success Criteria
+- Text contrast ratio of at least 4.5:1
+- Easy to read on dark backgrounds
+
+## 🔗 Resources
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+```
 
 ---
 
-## Issue 3: Add keyboard support to focus timer
+## 📋 Issue 3: Add Keyboard Support for Focus Timer
+
+**Title:** Add keyboard controls to focus timer
 
 **Labels:** `good first issue`, `help wanted`, `enhancement`
 
-### Description
-The focus timer currently only works with mouse clicks. Adding keyboard shortcuts would improve accessibility and user experience.
+**Description:**
+```
+## ⌨️ Feature Request
+Add keyboard shortcuts to control the focus timer.
 
-### Suggested Shortcuts
+## 🎯 Suggested Shortcuts
 | Key | Action |
 |-----|--------|
 | Space | Start/Pause timer |
 | R | Reset timer |
 | Escape | Close alert modal |
 
-### Implementation Notes
-- Add event listeners for keydown events
-- Only activate when timer module is visible/focused
-- Consider using `tabindex` for focus management
+## 📁 Files to Edit
+- `js/timer.js` - Add keyboard event listeners
 
-### Files to Check
-- `js/timer.js` - Add keyboard event handlers
+## 💡 Implementation Hints
+1. Add `keydown` event listener to document
+2. Check if timer module is in view
+3. Call existing `start()`, `pause()`, `reset()` functions
 
----
-
-## Issue 4: Improve README documentation
-
-**Labels:** `good first issue`, `help wanted`, `documentation`
-
-### Description
-The README could be improved with:
-
-1. **Screenshots** - Add actual screenshots of the dashboard in both light and dark mode
-2. **GIF Demo** - Create a short GIF showing the main features
-3. **Live Demo Link** - Deploy to GitHub Pages and add link
-4. **Browser Compatibility** - Add a compatibility table
-
-### How to Contribute
-1. Take screenshots of the dashboard
-2. Create a `screenshots` folder in the repository
-3. Update README.md with the new images
-
-### Bonus Points
-- Create screenshots for both light and dark mode
-- Show mobile responsive views
-- Capture interactions (task completion, timer, etc.)
+## ✅ Success Criteria
+- [ ] Space toggles start/pause
+- [ ] R key resets timer
+- [ ] Esc closes completion alert
+```
 
 ---
 
-## Issue 5: Add empty state UI for notes
+## 📋 Issue 4: Improve Mobile Layout for Notes Module
+
+**Title:** Fix responsive layout for notes module on mobile
+
+**Labels:** `good first issue`, `help wanted`, `responsive`
+
+**Description:**
+```
+## 📱 Problem
+On small screens (< 480px), the notes grid can have layout issues.
+
+## 🎯 What Needs Fixing
+- Note cards may overflow
+- Search input too wide
+- Add note button alignment
+
+## 📁 Files to Edit
+- `css/main.css` - Look for `@media (max-width: 480px)`
+- Check `.notes-grid` and `.note-card` styles
+
+## 💡 Tips
+- Use browser dev tools to test mobile sizes
+- Test on 375px width (iPhone SE)
+- Check landscape orientation too
+
+## ✅ Success Criteria
+- [ ] Notes display properly on 375px width
+- [ ] No horizontal scrolling
+- [ ] All buttons accessible
+```
+
+---
+
+## 📋 Issue 5: Add Empty State Illustration for Notes
+
+**Title:** Add visual empty state for notes module
 
 **Labels:** `good first issue`, `help wanted`, `enhancement`
 
-### Description
-When there are no notes, the empty state message is plain. We should add:
+**Description:**
+```
+## 🎨 Enhancement
+The notes empty state could be more visually engaging.
 
-1. A nice illustration or icon
-2. A more engaging message
-3. A call-to-action button
+## 🎯 Current State
+Just shows "No notes yet" text.
 
-### Current State
-Just shows "No notes yet" with basic text.
+## ✨ Desired State
+- Nice SVG illustration/icon
+- Friendly message like "Capture your thoughts!"
+- Clear call-to-action
 
-### Expected State
-- Large, friendly icon (maybe a notepad with sparkles)
-- Encouraging message like "Capture your thoughts!"
-- A button that says "Create Your First Note"
-
-### Files to Check
+## 📁 Files to Edit
 - `index.html` - Update `#notesEmpty` element
-- `css/main.css` - Style `.empty-state` class
+- `css/main.css` - Style `.empty-state` if needed
 
-### Design Reference
-Look at how the tasks empty state is implemented for consistency.
+## 💡 Reference
+Check how the tasks empty state is done for consistency.
+
+## ✅ Success Criteria
+- [ ] Visually appealing empty state
+- [ ] Matches overall design aesthetic
+- [ ] Has clear CTA button
+```
 
 ---
 
-## Additional Issues to Consider
+## 🏷️ Required Labels
 
-### Issue 6: Add task due date reminders
-**Labels:** `enhancement`, `help wanted`
+Make sure these labels exist in your repository:
 
-Show visual indicator for tasks due today or overdue.
+| Label | Color | Description |
+|-------|-------|-------------|
+| `good first issue` | `#7057ff` | Good for newcomers |
+| `help wanted` | `#008672` | Extra attention needed |
+| `documentation` | `#0075ca` | Improvements to docs |
+| `enhancement` | `#a2eeef` | New feature or request |
+| `bug` | `#d73a4a` | Something isn't working |
+| `responsive` | `#fbca04` | Mobile/responsive issues |
 
-### Issue 7: Implement note categories
-**Labels:** `enhancement`
+---
 
-Allow users to organize notes with color-coded categories.
+## 📝 How to Create Issues
 
-### Issue 8: Add sound toggle for timer
-**Labels:** `enhancement`, `help wanted`
+1. Go to your repository on GitHub
+2. Click **Issues** → **New Issue**
+3. Copy the title and description from above
+4. Add the appropriate labels
+5. Click **Submit new issue**
 
-Let users enable/disable the timer completion sound.
-
-### Issue 9: Improve calendar accessibility
-**Labels:** `accessibility`, `help wanted`
-
-Add ARIA labels and keyboard navigation to calendar.
-
-### Issue 10: Add data export feature
-**Labels:** `feature`, `help wanted`
-
-Export tasks and notes as JSON or CSV for backup.
+That's it! Your project is now ready for contributors! 🎉

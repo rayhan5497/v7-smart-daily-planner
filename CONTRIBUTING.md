@@ -1,273 +1,170 @@
 # Contributing to V7 Smart Daily Planner
 
-First off, thank you for considering contributing to V7 Smart Daily Planner! 🎉
+Thank you for your interest in contributing! ❤️
 
-It's people like you that make this project better for everyone. We welcome contributions of all kinds - from fixing typos to adding new features.
-
----
-
-## 📋 Table of Contents
-
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#getting-started)
-- [How to Contribute](#how-to-contribute)
-- [Development Setup](#development-setup)
-- [Code Style Guidelines](#code-style-guidelines)
-- [Submitting a Pull Request](#submitting-a-pull-request)
-- [Reporting Bugs](#reporting-bugs)
-- [Suggesting Features](#suggesting-features)
-
----
-
-## 📜 Code of Conduct
-
-This project follows a simple code of conduct:
-
-- Be respectful and inclusive
-- Welcome newcomers
-- Focus on constructive feedback
-- Be patient with others
+We welcome contributions of all kinds - from fixing typos to adding new features. This guide will help you get started.
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Fork the Repository
-
-Click the "Fork" button in the top-right corner of the repository page.
+Click the **Fork** button in the top-right corner of the repository page.
 
 ### 2. Clone Your Fork
-
 ```bash
 git clone https://github.com/YOUR-USERNAME/v7-smart-daily-planner.git
 cd v7-smart-daily-planner
 ```
 
-### 3. Add Upstream Remote
-
-```bash
-git remote add upstream https://github.com/ORIGINAL-OWNER/v7-smart-daily-planner.git
-```
-
-### 4. Create a Branch
-
+### 3. Create a Branch
 ```bash
 git checkout -b feature/your-feature-name
 # or
 git checkout -b fix/your-bug-fix
 ```
 
----
+### 4. Make Your Changes
+Open `index.html` in your browser to see your changes live.
 
-## 🤝 How to Contribute
-
-### Good First Issues
-
-New to the project? Look for issues labeled:
-- `good first issue` - Great for first-time contributors
-- `help wanted` - We need your help!
-- `documentation` - Help improve our docs
-
-### Types of Contributions
-
-| Type | Description |
-|------|-------------|
-| 🐛 Bug Fixes | Fix existing issues |
-| ✨ Features | Add new functionality |
-| 📝 Documentation | Improve README, comments, etc. |
-| 🎨 UI/UX | Enhance design and user experience |
-| ♿ Accessibility | Improve accessibility |
-| ⚡ Performance | Optimize code performance |
-
----
-
-## 💻 Development Setup
-
-### Prerequisites
-
-- A modern web browser
-- A code editor (VS Code recommended)
-- Git installed on your machine
-
-### Running Locally
-
-1. Open the project folder
-2. Open `index.html` in your browser
-   - Or use Live Server extension in VS Code
-   - Or run: `python -m http.server 8000`
-
-### Project Structure
-
-```
-├── index.html          # Main HTML file
-├── css/
-│   ├── main.css        # Core styles
-│   └── themes.css      # Theme variables
-├── js/
-│   ├── app.js          # App initialization
-│   ├── tasks.js        # Tasks module
-│   ├── notes.js        # Notes module
-│   ├── timer.js        # Timer module
-│   ├── weather.js      # Weather module
-│   └── calendar.js     # Calendar module
+### 5. Commit Your Changes
+```bash
+git add .
+git commit -m "feat: add awesome feature"
 ```
 
+**Commit Message Format:**
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `docs:` - Documentation
+- `style:` - CSS/formatting changes
+- `refactor:` - Code refactoring
+
+### 6. Push and Create PR
+```bash
+git push origin feature/your-feature-name
+```
+Then open a Pull Request on GitHub!
+
 ---
 
-## 📏 Code Style Guidelines
+## 📌 Good First Issues
+
+Look for issues labeled:
+
+| Label | Description |
+|-------|-------------|
+| `good first issue` | Beginner-friendly tasks |
+| `help wanted` | We need your help! |
+| `documentation` | Improve docs |
+| `enhancement` | New features |
+
+---
+
+## 🧹 Code Style Guidelines
 
 ### JavaScript
-
-- Use ES6+ features (const/let, arrow functions, template literals)
-- Use meaningful variable and function names
-- Add JSDoc comments for functions
-- Use the Module pattern (IIFE) for encapsulation
-- Prefix localStorage keys with `v7-`
-
 ```javascript
-/**
- * Good example
- */
+// ✅ Good - Use meaningful names and ES6+
 function calculateTotalTime(sessions) {
   return sessions.reduce((total, s) => total + s.duration, 0);
 }
 
-// Avoid
+// ❌ Bad - Unclear naming
 function calc(s) {
   return s.reduce((t, x) => t + x.d, 0);
 }
 ```
 
 ### CSS
-
-- Use CSS custom properties for colors and values
-- Follow BEM-like naming: `.module-element`
-- Use flexbox/grid for layouts
-- Mobile-first responsive design
-
 ```css
-/* Good example */
+/* ✅ Good - Use CSS variables and clear naming */
 .task-card {
   background: var(--bg-card);
   border-radius: 12px;
 }
 
-.task-card:hover {
-  transform: translateX(4px);
+/* ❌ Bad - Magic numbers and unclear names */
+.tc {
+  background: #fff;
+  border-radius: 12px;
 }
 ```
 
 ### HTML
+```html
+<!-- ✅ Good - Semantic and accessible -->
+<button class="btn btn-primary" aria-label="Add task">
+  Add Task
+</button>
 
-- Use semantic HTML5 elements
-- Include proper accessibility attributes
-- Use meaningful id and class names
+<!-- ❌ Bad - Non-semantic -->
+<div class="btn" onclick="add()">Add Task</div>
+```
 
 ---
 
-## 🔄 Submitting a Pull Request
+## 📸 Adding Screenshots
 
-### 1. Sync with Upstream
+This is a **great first contribution**!
 
-```bash
-git fetch upstream
-git checkout main
-git merge upstream/main
-```
+1. Open the dashboard in your browser
+2. Take screenshots of different views
+3. Save to `assets/screenshots/` folder
+4. Update `README.md` with new image paths
 
-### 2. Update Your Branch
+**Recommended screenshots:**
+- Dashboard desktop (light mode)
+- Dashboard desktop (dark mode)
+- Mobile view
+- Individual modules
 
-```bash
-git checkout your-branch
-git rebase main
-```
+---
 
-### 3. Push Your Changes
+## ✅ PR Checklist
 
-```bash
-git push origin your-branch
-```
-
-### 4. Create Pull Request
-
-1. Go to your fork on GitHub
-2. Click "New Pull Request"
-3. Select your branch
-4. Fill in the PR template:
-   - Describe what you changed
-   - Reference any related issues
-   - Include screenshots if UI changes
-
-### PR Checklist
+Before submitting your PR, ensure:
 
 - [ ] Code follows style guidelines
 - [ ] No console errors
-- [ ] Tested on multiple browsers
-- [ ] Responsive design works
+- [ ] Tested in Chrome & Firefox
+- [ ] Tested on mobile (use dev tools)
+- [ ] README updated (if needed)
 - [ ] Meaningful commit messages
 
 ---
 
-## 🐛 Reporting Bugs
+## 🔄 Syncing Your Fork
 
-### Before Submitting
+Keep your fork up to date:
 
-1. Search existing issues to avoid duplicates
-2. Try reproducing in an incognito window
-3. Clear localStorage and retry
-
-### Bug Report Template
-
-```markdown
-**Description**
-A clear description of the bug.
-
-**Steps to Reproduce**
-1. Go to '...'
-2. Click on '...'
-3. See error
-
-**Expected Behavior**
-What you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots.
-
-**Environment**
-- Browser: [e.g., Chrome 120]
-- OS: [e.g., Windows 11]
+```bash
+git remote add upstream https://github.com/TheVaibhaw/v7-smart-daily-planner.git
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
 ```
 
 ---
 
-## 💡 Suggesting Features
+## 💬 Need Help?
 
-We love new ideas! When suggesting features:
-
-1. Check if it's already suggested
-2. Explain the use case
-3. Describe the expected behavior
-4. Consider implementation complexity
+- Open a [Discussion](https://github.com/TheVaibhaw/v7-smart-daily-planner/discussions)
+- Check existing [Issues](https://github.com/TheVaibhaw/v7-smart-daily-planner/issues)
+- Read the code comments
 
 ---
 
-## 🏆 Recognition
+## 🏆 Contributors
 
-Contributors will be:
+All contributors will be:
 - Listed in our README
 - Thanked in release notes
 - Part of an awesome community!
 
 ---
 
-## ❓ Questions?
-
-- Open a Discussion on GitHub
-- Check existing issues for answers
-- Be patient - we're all volunteers!
-
----
-
-**Thank you for contributing! 🙏**
+**Happy coding! 🚀**
 
 Every contribution, no matter how small, makes a difference.

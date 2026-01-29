@@ -70,7 +70,16 @@ V7 Smart Daily Planner is a modern, production-ready productivity dashboard buil
 
 ## 📸 Screenshots
 
-> Screenshots coming soon! You can help by contributing screenshots of the dashboard.
+### Dashboard — Light Mode (Desktop)
+![Dashboard Desktop Light](./assets/screenshots/dashboard-desktop-light.png)
+
+### Dashboard — Dark Mode (Desktop)
+![Dashboard Desktop Dark](./assets/screenshots/dashboard-desktop-dark.png)
+
+### Dashboard — Mobile View
+![Dashboard Mobile](./assets/screenshots/dashboard-mobile.png)
+
+> 📷 **Want to contribute?** Add screenshots and earn your first contribution! See our [Contributing Guide](CONTRIBUTING.md).
 
 ---
 
@@ -97,7 +106,7 @@ V7 Smart Daily Planner is a modern, production-ready productivity dashboard buil
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/v7-smart-daily-planner.git
+   git clone https://github.com/TheVaibhaw/v7-smart-daily-planner.git
    ```
 
 2. **Navigate to the project folder**
@@ -146,9 +155,14 @@ v7-smart-daily-planner/
 │   ├── weather.js      # Weather widget module
 │   └── calendar.js     # Calendar module
 ├── assets/
-│   └── icons/          # SVG icons (inline in code)
+│   ├── icons/          # SVG icons
+│   └── screenshots/    # Project screenshots
+├── .github/
+│   ├── ISSUE_TEMPLATE/ # Issue templates
+│   └── PULL_REQUEST_TEMPLATE.md
 ├── README.md           # This file
-└── CONTRIBUTING.md     # Contribution guidelines
+├── CONTRIBUTING.md     # Contribution guidelines
+└── LICENSE             # MIT License
 ```
 
 ---
@@ -179,9 +193,16 @@ v7-smart-daily-planner/
 
 We welcome contributions from everyone! Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
 
-### Good First Issues
+### 🏷️ Good First Issues
 
 We have several beginner-friendly issues labeled `good first issue` - perfect for first-time contributors!
+
+| Issue | Description |
+|-------|-------------|
+| Add screenshots to README | Capture and add dashboard screenshots |
+| Improve dark mode contrast | Fix readability in dark mode |
+| Add keyboard shortcuts to timer | Space/Enter to control timer |
+| Improve mobile layout | Fix responsive issues on mobile |
 
 ---
 
@@ -199,10 +220,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## 🏷️ Topics
+
+`html` `css` `javascript` `productivity` `dashboard` `opensource` `good-first-issue` `hacktoberfest` `beginner-friendly`
+
+---
+
 <p align="center">
   Made with ❤️ for productivity enthusiasts
-  <br>
-  <a href="https://github.com/yourusername/v7-smart-daily-planner/issues">Report Bug</a>
+  <br><br>
+  <a href="https://github.com/TheVaibhaw/v7-smart-daily-planner/issues">🐛 Report Bug</a>
   •
-  <a href="https://github.com/yourusername/v7-smart-daily-planner/issues">Request Feature</a>
+  <a href="https://github.com/TheVaibhaw/v7-smart-daily-planner/issues">✨ Request Feature</a>
+  •
+  <a href="https://github.com/TheVaibhaw/v7-smart-daily-planner/fork">🍴 Fork Project</a>
 </p>
