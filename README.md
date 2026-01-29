@@ -70,14 +70,11 @@ V7 Smart Daily Planner is a modern, production-ready productivity dashboard buil
 
 ## 📸 Screenshots
 
-### Dashboard — Light Mode (Desktop)
-![Dashboard Desktop Light](./assets/screenshots/dashboard-desktop-light.png)
-
-### Dashboard — Dark Mode (Desktop)
-![Dashboard Desktop Dark](./assets/screenshots/dashboard-desktop-dark.png)
+### Dashboard — Desktop View
+![Dashboard Desktop](./assets/images/v7-desktop.png)
 
 ### Dashboard — Mobile View
-![Dashboard Mobile](./assets/screenshots/dashboard-mobile.png)
+![Dashboard Mobile](./assets/images/v7-mobile.png)
 
 > 📷 **Want to contribute?** Add screenshots and earn your first contribution! See our [Contributing Guide](CONTRIBUTING.md).
 
