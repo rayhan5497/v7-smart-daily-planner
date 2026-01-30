@@ -1038,6 +1038,10 @@ a:hover {
     margin-bottom: 0.5rem;
 }
 
+.calendar-weekdays .short {
+    display: none;
+}
+
 .calendar-weekday {
     text-align: center;
     font-size: 0.75rem;
@@ -1309,6 +1313,16 @@ a:hover {
 }
 
 @media (max-width: 992px) {
+    .mobile-menu-toggle {
+        box-shadow: var(--shadow-lg);
+        position: fixed;
+        z-index: 99;
+    }
+
+    .greeting {
+        margin-top: 4rem;
+    }
+
     .sidebar {
         transform: translateX(-100%);
     }
@@ -1371,6 +1385,10 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    .sidebar {
+        width: auto;
+    }
+
     .main-content {
         padding: 0.75rem;
     }
@@ -1384,6 +1402,12 @@ a:hover {
         border-radius: 12px;
     }
 
+    .module-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
     .weather-temp {
         font-size: 2.5rem;
     }
@@ -1393,8 +1417,39 @@ a:hover {
         gap: 1rem;
     }
 
+    .timer-controls {
+        flex-direction: column;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .calendar-weekdays {
+        gap: 0;
+    }
+
+    .calendar-weekdays .full {
+        display: none;
+    }
+
+    .calendar-weekdays .short {
+        display: block;
+    }
+
+    .calendar-weekday {
+        padding: 0.3rem;
+    }
+
+    .calendar-days {
+        gap: 0;
+    }
+
     .calendar-day {
         font-size: 0.75rem;
+    }
+
+    .modal-footer {
+        justify-content: center;
+        flex-direction: column-reverse;
     }
 }
 
